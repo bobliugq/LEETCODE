@@ -1,5 +1,3 @@
-|no.|number|question|level|c++|
+|no.|number|question|level|language|
 |---|---|---|---|---|
-|1|206|[Reverse Linklist](https://leetcode.com/problems/reverse-linked-list/)|Easy|[c++]()|
-
-
+|1|93|[Restore IP Address](https://leetcode.com/problems/restore-ip-addresses)|Medium|[c++]|

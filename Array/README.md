@@ -1,5 +1,6 @@
-|no.|number|question|level|c++|
+|no.|number|question|level|language|
 |---|---|---|---|---|
-|1|206|[Reverse Linklist](https://leetcode.com/problems/reverse-linked-list/)|Easy|[c++]()|
+|1|73|[Set_matrix_Zeroes](https://leetcode.com/problems/set-matrix-zeroes)|Easy|[c++]|
+|2|289|[Game of Life](https://leetcode.com/problems/game-of-life)|Easy|[c++]|
 
 
