@@ -1,6 +1,5 @@
-# LeetCode
-Work Harder and Learn More
+# Work Harder and Learn More
+## Step to FLAG, 每一步，都算数
 
-|no.|number|question|level|c++|
-|---|---|---|---|---|
-|1|206|[Reverse Linklist](https://leetcode.com/problems/reverse-linked-list/)|Easy|[c++]()|
+
+
