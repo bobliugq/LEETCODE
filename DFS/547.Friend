@@ -1,0 +1,61 @@
+class Solution {
+public:
+    int findCircleNum(vector<vector<int>>& M) {
+        if (M.empty()) {
+            return 0;
+        }
+        int n = M.size();
+        int count = 0;
+        vector<int> visited(n, 0);
+        for (int i = 0; i < n; ++i) {
+            if (visited[i] == 0) {
+                count++;
+                dfs(M, visited, i);
+            }
+        }
+        return count;
+    }
+
+    void dfs(vector<vector<int>>& M, vector<int>& visited, int i) {
+        for (int j = 0; j < visited.size(); ++j) {
+            if (M[i][j] == 1 && visited[j] == 0) {
+                visited[j] = 1;
+                dfs(M, visited, j);
+            }
+        }
+    }
+};
+
+
+// Union Find Algorithm
+
+class Solution {
+public:
+    int findCircleNum(vector<vector<int>>& M) {
+        if (M.empty()) {
+            return 0;
+        }
+        int n = M.size();
+        int groud = n;
+        vector<int> parents(n, 0);
+        for (int i = 0; i < n; ++i) {
+            parents[i] = i;
+        }
+        for (int i = 0; i < n; ++i) {
+            for (int j = i + 1; j < n; ++j) {
+                if (M[i][j] == 1) {
+                    int p1 = find(i, parents);
+                    int p2 = find(j, parents);
+                    if (p1 != p2) {
+                        parents[p1] = p2;
+                        --groud;
+                    }
+                }
+            }
+        }
+        return groud;
+    }
+    int find(int x, vector<int>& parents) {
+        return parents[x] == x ? x : find(parents[x], parents);
+    }
+};
